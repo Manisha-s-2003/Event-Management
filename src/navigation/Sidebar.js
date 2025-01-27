@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo3.jpg'; // Adjust the path based on your project structure
+import '../styles/SideBar.css';
+
 
 const Sidebar = () => {
   return (
@@ -31,7 +33,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/booking">
+          <Link className="nav-link" to="#booking">
             Bookings
           </Link>
         </li>

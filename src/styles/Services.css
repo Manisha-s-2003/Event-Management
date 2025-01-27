@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  nav img.centered-image {
+    height: 50px;
+    border-radius: 5px;
+  }
+  
+  nav h5 {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  header h4 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+    color: white;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
