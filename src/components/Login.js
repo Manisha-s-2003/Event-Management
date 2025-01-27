@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
- 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -20,11 +18,23 @@ const Login = () => {
 
       const data = await response.json();
       if (response.ok) {
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.token); // Save token
+        localStorage.setItem('role', data.role); // Save role for future use
         alert(data.message);
-        navigate('/dashboard');
+
+        // Redirect based on role
+        switch (data.role) {
+          case 'admin':
+            navigate('/dashboard'); // Navigate to admin dashboard
+            break;
+          case 'organizer':
+            navigate('/dashboard'); // Navigate to organizer dashboard
+            break;
+          default:
+            navigate('/dashboard'); // Navigate to user dashboard
+        }
       } else {
-        alert(data.message);
+        alert(data.message); // Show error message if login fails
       }
     } catch (error) {
       console.error('Error:', error);
@@ -77,8 +87,12 @@ const Login = () => {
               </div>
               <p className="text-center mt-3 mb-0 text-muted">
                 Don’t have an account?{' '}
-                <Link to="/register" style={{ color: '#ff9800', textDecoration: 'none', fontWeight: 'bold' }}>Register here</Link> 
-
+                <Link
+                  to="/register"
+                  style={{ color: '#ff9800', textDecoration: 'none', fontWeight: 'bold' }}
+                >
+                  Register here
+                </Link>
               </p>
             </Card.Body>
           </Card>

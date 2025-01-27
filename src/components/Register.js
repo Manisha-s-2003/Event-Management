@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; 
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); 
+  const [role, setRole] = useState('User'); // Default role set to 'user'
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -17,7 +16,7 @@ const Register = () => {
       const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password}), // Send role along with other data
+        body: JSON.stringify({ name, email, password, role }), // Include role in the request body
       });
 
       const data = await response.json();
@@ -44,7 +43,7 @@ const Register = () => {
               </p>
               <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formName">
-                  <Form.Label >Full Name</Form.Label>
+                  <Form.Label>Full Name</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Enter your full name"
@@ -73,7 +72,18 @@ const Register = () => {
                     required
                   />
                 </Form.Group>
-                
+                <Form.Group className="mb-3" controlId="formRole">
+                  <Form.Label>Select Role</Form.Label>
+                  <Form.Select
+                    value={role}
+                    onChange={(e) => setRole(e.target.value)}
+                    required
+                  >
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Organizer">Organizer</option>
+                  </Form.Select>
+                </Form.Group>
                 <Button
                   type="submit"
                   className="btn btn-warning w-100"
@@ -84,8 +94,16 @@ const Register = () => {
               </Form>
               <p className="text-center mt-3 mb-0 text-muted">
                 Already have an account?{' '}
-                <Link to="/login" style={{ color: '#ff9800', textDecoration: 'none', fontWeight: 'bold' }}>Login here</Link> 
-                
+                <Link
+                  to="/login"
+                  style={{
+                    color: '#ff9800',
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Login here
+                </Link>
               </p>
             </Card.Body>
           </Card>
