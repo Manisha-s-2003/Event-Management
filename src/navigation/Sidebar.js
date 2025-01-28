@@ -19,7 +19,7 @@ const Sidebar = () => {
             borderRadius: '100px',
           }}
         />
-        <h5 className="m-0 text-warning">EVENTS MADE EASY</h5>
+        <h5 className="m-0 text-warning" >Event Buddy</h5>
       </div>
       <ul className="nav flex-column">
         <li className="nav-item">

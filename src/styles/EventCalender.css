@@ -1,80 +1,68 @@
-/* Search bar styling */
-.search-bar input {
-    width: 30px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
+.calendar-container {
+  width: 100%;
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
   
-  /* Calendar styling */
-  .calendar-container {
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .events-list {
-    margin-top: 20px;
-  }
-  
-  .event-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .event-item h6 {
-    margin: 0;
-    font-size: 1.1rem;
-  }
-  
-  .event-item p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #555;
-  }
- 
-  
-/* CSS for better responsiveness */
+}
+
+.search-container, .date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-popup {
+  position: absolute;
+  z-index: 999;
+  margin-top: 10px; /* Adds spacing between the date input and the calendar */
+  margin-left: 0;
+  width: 250px; /* Adjust the width of the calendar popup */
+}
+
+.events-list {
+  margin-top: 20px;
+}
+
+.event-item {
+  margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
-    .calendar-container {
-      padding: 10px;
-    }
-  
-    .d-flex {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .form-label {
-      margin-bottom: 10px;
-    }
-  
-    input[type="text"] {
-      width: 100%;
-    }
-  
-    .react-calendar {
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .events-list {
-      margin-top: 20px;
-    }
+  .filters-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  @media (max-width: 480px) {
-    .react-calendar {
-      max-width: 100%;
-    }
-  
-    .calendar-container {
-      padding: 5px;
-    }
+
+  .form-input {
+    width: 100%;
   }
-    
+
+  .calendar-popup {
+    width: 100%;
+    margin-top: 20px; /* Adds spacing below the date input */
+  }
+}
