@@ -1,0 +1,63 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    background: #fff;
+    padding: 10px 20px;
+  }
+  
+  .toggle_menu {
+    border: none;
+    background: none;
+    font-size: 24px;
+  }
+  
+  .create-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .account-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .night_mode_switch__btn {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .offcanvas {
+    background: #f8f9fa;
+  }
+  
+  .offcanvas-create-btn {
+    display: flex;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .social-links a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  

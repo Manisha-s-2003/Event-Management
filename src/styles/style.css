@@ -1,0 +1,180 @@
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif !important;
+	font-size: 0.875rem;
+	line-height: 1.42857143;
+	color: #333;
+	background: #F5F7F9  !important;
+}
+
+/* Wrapper */
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  width:100%;
+}
+
+/* Main Form Container */
+.app-form {
+  display: flex;
+  width: 100%;
+  max-width: 1000px; /* Set max width to prevent excessive stretching */
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.app-form-sidebar {
+  width: 40%;
+  background-image: url("../assets/bakimg2.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.sidebar-sign-logo img {
+  max-width: 150px;
+  
+
+	padding-top: 0;
+
+
+
+
+}
+
+.sign_sidebar_text h1 {
+  font-size: 22px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Form Content */
+.app-form-content {
+  width: 60%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-top-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sign-logo img {
+  max-width: 120px;
+}
+
+/* Registration Form */
+.registration {
+  width: 250px;
+  max-width: 400px;
+  margin: 5px; /* Centers the form */
+  text-align: center;
+}
+
+.registration-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Buttons */
+.main-btn {
+  background:  #ffc107    ;
+
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.main-btn:hover {
+  background:  #eac146;
+  
+}
+
+/* Social Login */
+.social-btns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.social-login-btn:first-child {
+  background:  white ;
+  color: black;
+}
+
+.social-login-btn:nth-child(2) {
+  background: white;
+  color: black;
+}
+
+.already-account{
+  font-weight: bold;
+}
+.sign_link{
+  color: #ffc107;
+}
+
+/* Footer */
+.copyright-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}

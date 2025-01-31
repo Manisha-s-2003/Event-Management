@@ -1,49 +1,37 @@
-// // src/App.js
-// import React from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Login from './screens/login';
-// import Register from './screens/register';
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import SignupScreen from "./auth/SignupScreen";
+import SigninScreen from "./auth/SigninScreen";
+import { AuthContext } from "./context/AuthContext"; 
+import DashboardScreen from "./screens/dashboardScreen";
 
-// const App = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/register" element={<Register />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login';
-import Dashboard from './components/DashBoard';
-import Event from './components/Events';
-import Bookings from './components/Bookings';
-import EventManagementDashboard from './components/Events';
 const App = () => {
+  const { user, loading } = useContext(AuthContext); 
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Router>
       <Routes>
-      <Route path="/dashboard" element={<Dashboard />} />
+        {/* Public Routes */}
+        <Route path="/signup" element={<SignupScreen />} />
+        <Route path="/signin" element={<SigninScreen />} />
 
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        <Route path='/event' element={<EventManagementDashboard/>}/>
-        <Route path='/booking' element={<Bookings/>}/>
+        {/* Protected Route */}
+        <Route
+          path="/dashboard"
+          element={user ? <DashboardScreen /> : <Navigate to="/signin" />}
+        />
 
-
+        {/* Redirect to Signin page if trying to access protected routes without being logged in */}
+        <Route path="/" element={<Navigate to="/signup" />} />
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
+
 
