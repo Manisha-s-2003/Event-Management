@@ -8,25 +8,45 @@
     background: #fff;
     padding: 10px 20px;
   }
-  
-  .toggle_menu {
-    border: none;
-    background: none;
-    font-size: 24px;
+  .logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+
   }
+  .title{
+    font-style: italic;
+    font-family: cursive;
+    color: #ffc107;
+    font-size: 35px;
+    font-weight: bold;
+  }
+ 
   
   .create-btn {
-    background: #007bff;
+    background: #ffc107;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
+    width: 150px;
+    height: 50px;
+    
+  }
+  .create-btn-text{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
   }
   
   .account-link {
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    color: #ffc107;
   }
   
   .profile-img {
@@ -41,23 +61,19 @@
     cursor: pointer;
   }
   
-  .offcanvas {
+  .offcanvas-footer{
     background: #f8f9fa;
   }
   
   .offcanvas-create-btn {
     display: flex;
     align-items: center;
-    background: #007bff;
+    background:#ffc107;
     color: white;
-    padding: 10px;
+    padding-top: 60px;
     border-radius: 5px;
     text-decoration: none;
   }
   
-  .social-links a {
-    margin-right: 10px;
-    font-size: 20px;
-    color: #333;
-  }
+
   
