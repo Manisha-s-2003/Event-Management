@@ -16,26 +16,26 @@ const Header = () => {
     <header className="header">
       <Navbar expand="lg" className="navbar fixed-top bg-barren barren-head">
         <div className="container-fluid">
-          <img src={logo} alt="Event Buddy" className="logo"/>
-              <h2 className="title">Event Buddy</h2>
+          <img src={logo} alt="Event Buddy" className="logo" />
+          <h2 className="title">Event Buddy</h2>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Collapse>
             <Nav className="ms-auto">
-            <Nav className="navbar-nav">
-           
-           <Nav.Link href="#">
-           <h3 className="create-btn-text">Explore Events</h3>
-           </Nav.Link>
-           <Nav.Link href="/createevent" className="create-btn">
-                <h3 className="create-btn-text">Create Event </h3>
-              </Nav.Link>
-              
-         </Nav>
-         
-             
+              <Nav className="navbar-nav">
+
+                <Nav.Link href="#">
+                  <h3 className="create-btn-text">Explore Events</h3>
+                </Nav.Link>
+                <Nav.Link href="/createevent" className="create-btn">
+                  <h3 className="create-btn-text">Create Event </h3>
+                </Nav.Link>
+
+              </Nav>
+
+
               <Dropdown align="end">
                 <Dropdown.Toggle variant="link" id="account-dropdown" className="account-link">
-                    <h5> Profile</h5>
+                  <h5> Profile</h5>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-account">
                   <Dropdown.ItemText className="dropdown-account-header">
@@ -64,12 +64,12 @@ const Header = () => {
             </Button>
           </div>
           <Nav className="navbar-nav">
-           
+
             <Nav.Link href="#">
               Explore Events
             </Nav.Link>
           </Nav>
-        
+
         </Offcanvas.Body>
       </Offcanvas>
     </header>
