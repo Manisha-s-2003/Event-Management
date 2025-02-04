@@ -4,6 +4,8 @@ import SignupScreen from "./auth/SignupScreen";
 import SigninScreen from "./auth/SigninScreen";
 import { AuthContext } from "./context/AuthContext"; 
 import DashboardScreen from "./screens/dashboardScreen";
+import CreateEvent from "./screens/createEvent";
+import CreateVenueEvent from "./screens/createVenueEvent";
 
 const App = () => {
   const { user, loading } = useContext(AuthContext); 
@@ -27,6 +29,8 @@ const App = () => {
 
         {/* Redirect to Signin page if trying to access protected routes without being logged in */}
         <Route path="/" element={<Navigate to="/signup" />} />
+        <Route path="/createevent" element={ <CreateEvent/>}/>
+        <Route path="/create-venue-event" element={<CreateVenueEvent/>}/>
       </Routes>
     </Router>
   );

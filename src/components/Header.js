@@ -21,9 +21,18 @@ const Header = () => {
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Collapse>
             <Nav className="ms-auto">
-              <Nav.Link href="#" className="create-btn">
+            <Nav className="navbar-nav">
+           
+           <Nav.Link href="#">
+           <h3 className="create-btn-text">Explore Events</h3>
+           </Nav.Link>
+           <Nav.Link href="/createevent" className="create-btn">
                 <h3 className="create-btn-text">Create Event </h3>
               </Nav.Link>
+              
+         </Nav>
+         
+             
               <Dropdown align="end">
                 <Dropdown.Toggle variant="link" id="account-dropdown" className="account-link">
                     <h5> Profile</h5>
